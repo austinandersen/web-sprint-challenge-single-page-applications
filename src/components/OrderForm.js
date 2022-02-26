@@ -31,10 +31,10 @@ const OrderForm = (props) => {
 
 
    return (
-    <form className='order-pizza' onSubmit={handleSubmit}>
+    <form id='pizza-form'className='order-pizza' onSubmit={handleSubmit}>
       <div className='form inputs'> 
-      <label>Input your Name
-        <input
+      <label id='name-input'>Input your Name
+        <input  
           value={values.name}
           onChange={handleChange}
           name='name'
@@ -42,8 +42,8 @@ const OrderForm = (props) => {
         />
       </label>
 
-      <label>Choose Pizza Size
-        <select
+      <label id='size-dropdown'>Choose Pizza Size
+        <select  
           onChange={handleChange}
           value={values.size}
           name='size'
@@ -96,9 +96,9 @@ const OrderForm = (props) => {
         </label>
       </div>
 
-      <div className='special-text'> 
+      <div className='notes'> 
       <label>Special Instrutions
-        <input
+        <input id='special-text'
           value={values.notes}
           onChange={handleChange}
           name='notes'

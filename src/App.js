@@ -55,8 +55,8 @@ const App = () => {
       <header>
         <h1>Lambda Eats</h1>
       </header>
-      <Link to="/">
-        <button type="button">
+      <Link id='order-pizza' to="/">
+        <button type="button"  >
           Want Pizza?
         </button>
       </Link>
