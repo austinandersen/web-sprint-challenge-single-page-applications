@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react';
+import {Switch, Link, Route} from 'react-router-dom'
+import Summary from "./OrderSummary";
 
 
 
@@ -8,8 +10,8 @@ const OrderForm = (props) => {
     values,
     submit,
     change,
-    //disabled,
-    //errors,
+    disabled,
+    errors,
   } = props
   
 
@@ -107,8 +109,34 @@ const OrderForm = (props) => {
       </label>
       </div>
 
+      <div className='form-submit'>
+        <h2>Add to Order</h2>
+        <button disabled={disabled}>submit</button>
+        <div className='errors'>
+          <div>{errors.name}</div>
+          <div>{errors.size}</div>
+          <div>{errors.toppings}</div>
+        </div>
+      </div>
 
+      <div className='form-submit'> 
+      <Link to="/pizza">
+        <button disabled={disabled}>Add to Order</button>
+        <div className='errors'>
+          <div>{errors.name}</div>
+          <div>{errors.size}</div>
+          <div>{errors.toppings}</div>
+        </div>
+      </Link>
+      <Switch>
+        <Route path="/pizza">
+          <Summary
+          />
+        </Route>
+      </Switch>
+      </div>
     </form>
+    
   )
 }
 

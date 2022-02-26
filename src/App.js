@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {Switch, Route, Link} from 'react-router-dom'
 import OrderForm from './components/OrderForm'
+
 import * as yup from "yup";
 import formSchema from "./validation/formSchema";
 
@@ -55,7 +56,7 @@ const App = () => {
       <header>
         <h1>Lambda Eats</h1>
       </header>
-      <Link id='order-pizza' to="/">
+      <Link id='order-pizza' to="/pizza">
         <button type="button"  >
           Want Pizza?
         </button>
@@ -68,11 +69,6 @@ const App = () => {
             disabled={disabled}
             errors={formErrors}
           />
-          {/* formValues.map(inputs => {
-            return (
-              <Summary key={}
-            )
-          }) */}
         </Route>
       </Switch>
     </div>

@@ -5,7 +5,7 @@ const formSchema = yup.object().shape({
     .string()
     .trim()
     .required('name is required!')
-    .min(3, 'name has to be more than three characters!'),
+    .min(2, "name must be at least 2 characters"),
     size: yup
     .string()
     .oneOf(['Large', 'Medium', 'Small'], 'Size is required!!'),
